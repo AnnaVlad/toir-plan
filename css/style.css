@@ -565,15 +565,13 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.ratting {
   max-width: 65px;
   min-height: 45px;
   text-align: center;
   border-radius: 4px;
   color: #ffffff;
   background-color: #EC1F46;
+  padding: 7px 6px;
 }
 
 .ratting__text {
