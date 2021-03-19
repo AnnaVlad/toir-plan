@@ -419,6 +419,10 @@ template {
   line-height: 18px;
 }
 
+.navigation__item--mobile--visible {
+  display: none;
+}
+
 .search {
   position: relative;
   overflow: hidden;
@@ -469,6 +473,8 @@ template {
 .user__name {
   height: 40px;
   margin-left: 18px;
+  font-size: 14px;
+  line-height: 18px;
   color: #333333;
   padding-top: 9px;
 }
@@ -1436,6 +1442,9 @@ template {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 78px;
+  }
   .container {
     max-width: 576px;
     width: 92%;
@@ -1443,8 +1452,42 @@ template {
   .logo {
     width: 133px;
   }
-  .navbar__search, .navbar__user, .navbar-menu {
+  .navbar__user--mobile--hidden, .navbar__search--mobile--hidden {
     display: none;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar__mobile--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+  }
+  .navbar-menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+  }
+  .navbar-menu--visible {
+    display: block;
+  }
+  .user__name--light {
+    color: #ffffff;
+    margin-left: 0;
+    margin-top: 10px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .menu-button {
     height: 16px;
@@ -1466,6 +1509,19 @@ template {
     width: 18px;
     height: 1px;
     background-color: #333333;
+  }
+  .navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 30px;
+  }
+  .navigation__item {
+    margin-bottom: 20px;
+  }
+  .navigation__item--mobile--visible {
+    display: block;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
@@ -1517,8 +1573,6 @@ template {
   }
   .swiper-slide__image {
     width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -1567,9 +1621,9 @@ template {
   .hotel__slider {
     margin-bottom: 20px;
   }
-  .hotel-slider {
-    height: 250px;
-    width: 100%;
+  .swiper-slide__image {
+    height: 278px;
+    overflow: hidden;
   }
   .newsletter {
     padding: 73px 0 86px 0;

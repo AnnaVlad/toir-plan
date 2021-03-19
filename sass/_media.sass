@@ -93,14 +93,44 @@
         grid-column: span 5
 
 @media (max-width: 768px)
+  body
+    padding-top: 78px
   .container
     max-width: 576px
     width: 92%
   .logo
     width: 133px
   .navbar
-    &__search, &__user, &-menu
+    &__user, &__search
+      &--mobile
+        &--hidden
+          display: none
+    &__user
+      flex-direction: column
+      justify-content: center
+    &__mobile
+      &--fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 40
+    &-menu
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 78px
+      &--visible
+        display: block
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
+        flex-basis: 100%
   .menu
     &-button
       height: 16px
@@ -114,6 +144,14 @@
         width: 18px
         height: 1px
         background-color: $text-color
+  .navigation
+    flex-direction: column
+    padding-top: 30px
+    &__item
+      margin-bottom: 20px
+      &--mobile
+        &--visible
+          display: block
   .hotel
     &-name
       flex-basis: 100%
@@ -146,7 +184,6 @@
     &-slide
       &__image
         width: 100%
-        object-fit: contain
   .reviews
     &-slider
       &__item
@@ -183,9 +220,11 @@
   .hotel
     &__slider
       margin-bottom: 20px
-    &-slider
-      height: 250px
-      width: 100%
+  .swiper
+    &-slide
+      &__image
+        height: 278px
+        overflow: hidden
   .newsletter
     padding: 73px 0 86px 0
     &-title
@@ -246,7 +285,6 @@
         grid-column: 1
         display: flex
         flex-direction: column
-
     &__info
       flex-basis: 100%
       margin-bottom: 15px
