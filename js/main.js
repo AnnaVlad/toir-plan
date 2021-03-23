@@ -51,5 +51,22 @@ closeModalButton.on('click', closeModal);
     modalOverlay.removeClass('modal__overlay--visible');
     modalDialog.removeClass('modal__dialog--visible');
   }
-
+// Обработка форм
+  $('.form').each(function(){
+    $(this).validate({
+      messages: {
+        name: {
+          required: "Введите Ваше имя",
+          minlength: "Не меньше 2 букв",
+        },
+        email: {
+          required: "Введите почтовый электронный адрес",
+          email: "name@domain.com"
+        },
+        phone: {
+          required: "Введите номер телефона",
+        },
+      },
+    });
+  });
 });

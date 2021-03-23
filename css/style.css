@@ -45,6 +45,11 @@ img {
   background-color: #EC1F46;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.error {
+  color: #EC1F46;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1256,6 +1261,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1383,13 +1392,13 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin: 15px 0 15px 0;
 }
 
 .modal__info {
@@ -1504,7 +1513,7 @@ template {
         grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
@@ -1714,7 +1723,7 @@ template {
   .map__block {
     margin-top: 20px;
   }
-  .footer__input {
+  .footer__input__group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
