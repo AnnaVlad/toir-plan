@@ -69,4 +69,5 @@ closeModalButton.on('click', closeModal);
       },
     });
   });
+  AOS.init();
 });
