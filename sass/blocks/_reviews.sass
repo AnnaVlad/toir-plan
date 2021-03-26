@@ -1,5 +1,5 @@
 .reviews
-  padding: 40px 0 70px 0
+  padding: 12px 0 40px 0
   &-title
     font-style: 300px
     font-size: 36px
@@ -7,10 +7,10 @@
     text-align: center
     text-transform: uppercase
     margin-bottom: 70px
-  &-swiper
+  &-slider
     &__button
       position: absolute
-      top: 50%
+      top: 40%
       transform: transateY(-50%)
       width: 30px
       height: 30px
@@ -23,10 +23,12 @@
       z-index: 99
       &--prev
         background-image: url(../img/arrow-prev-gray.svg)
-        left: 0
+        left: 1em
+
       &--next
         background-image: url(../img/arrow-next-gray.svg)
-        right: 0
+        right: 1em
+
   &-slider
     &__item
       display: flex
@@ -76,6 +78,7 @@
       font-weight: 300
       font-size: 12px
       line-height: 15px
+      margin-top: 0
     &__date
       font-weight: 100
       font-size: 10px
@@ -84,10 +87,12 @@
     &__text
       width: 537px
       margin: auto
-      font-weight: 100
+      font-weight: 300
       font-size: 12px
       line-height: 160%
       text-align: justify
     &__ratting
       display: flex
       align-items: center
+      img
+        margin: 0 1px
